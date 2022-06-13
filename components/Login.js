@@ -23,7 +23,7 @@ function Login({ providers }) {
               >
                 <span className="w-48 h-48 rounded rotate-[-40deg] bg-[#1d9bf0] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
                 <span className="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
-                  Sign in with {provider.name}
+                  {"Sign in with"} {provider.name}
                 </span>
               </button>
             )}
@@ -33,11 +33,11 @@ function Login({ providers }) {
         ))}
       </div>
       <div className="text-white bg-[#202327] p-5 !mt-10">
-              <h4 className="text-xl mb-3">Twitter Clone </h4>
-              <div className="mt-2">Made with NextJS, Firebase, NextAuth, Tailwind and Recoil</div>
-              <div className="mt-2">Has basic Twitter functionality:</div>
-              <div className="mt-2">Post, Comment, Delete, Like, Sign In/Out</div>
-              <div className="mt-2">Users can see and comment on other user's post!</div>
+              <h4 className="text-xl mb-3">{"Twitter Clone "}</h4>
+              <div className="mt-2">{"Made with NextJS, Firebase, NextAuth, Tailwind and Recoil"}</div>
+              <div className="mt-2">{"Has basic Twitter functionality:"}</div>
+              <div className="mt-2">{"Post, Comment, Delete, Like, Sign In/Out"}</div>
+              <div className="mt-2">{"Users can see and comment on other user's post!"}</div>
               <div className="mt-2">Have a Try!</div>
 
         </div>
