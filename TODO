@@ -1,25 +1,30 @@
+// JSON SAMPLE DATA HELD npoint.
 
-MUST
-EMOJI PICKER FIX IN INPUT.js
-COMMENTS
-
-
-
-
-NICE TO DO
-LEARN INPUT.JS firebase videostamp 2:25 omwards
-await 
-deconstructing
-posts thingy
-
-
-
-
-
-//packages
-tailwind
-recoil
-emoji
-headlessui
-nextAuth
-Firebase
+[
+    {
+      "img": "https://rb.gy/d9yjtu",
+      "tags": [
+        "#T20WorldCupFinal, ",
+        "#Kane Williamson"
+      ],
+      "heading": "T20 World Cup 2021 LIVE",
+      "description": "NZvAUS: New Zealand and Australia clash in the T20 World Cup final"
+    },
+    {
+      "img": "https://rb.gy/jvuy4v",
+      "tags": [
+        "@DubaAirshow, ",
+        "#gessdubai"
+      ],
+      "heading": "Trending in United Arab Emirates",
+      "description": "#earthquake"
+    },
+    {
+      "img": "",
+      "tags": [
+        "QUACKITY AND TUBBO"
+      ],
+      "heading": "Trending in Digital Creators",
+      "description": "tubbo and quackity"
+    }
+  ]

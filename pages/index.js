@@ -10,11 +10,11 @@ import Modal from "../components/Modal";
 import { modalState } from "../atoms/modalAtom";
 import { useRecoilState } from "recoil";
 
-export default function Home({trendingResults, followResults, providers}) {
-  
+export default function Home({ trendingResults, followResults, providers }) {
+
   const { data: session } = useSession();
   const [isOpen, setIsOpen] = useRecoilState(modalState);
-  
+
   if (!session) return <Login providers={providers} />
 
   return (
@@ -32,10 +32,9 @@ export default function Home({trendingResults, followResults, providers}) {
           trendingResults={trendingResults}
           followResults={followResults}
         />
-
-    {isOpen && (
-      <Modal />
-    )}
+        {isOpen && (
+          <Modal />
+        )}
       </main>
 
     </div>
@@ -44,12 +43,15 @@ export default function Home({trendingResults, followResults, providers}) {
 
 
 export async function getServerSideProps(context) {
-  const trendingResults = await fetch("https://jsonkeeper.com/b/NKEV").then(
+
+    const trendingResults = await fetch("https://api.npoint.io/df3867eb85b5c0a63829").then(
     (res) => res.json()
   );
-  const followResults = await fetch("https://jsonkeeper.com/b/WWMJ").then(
+  const followResults = await fetch("https://api.npoint.io/54b34afd99ae833fb42a").then(
     (res) => res.json()
   );
+
+
   const providers = await getProviders();
   const session = await getSession(context);
 
