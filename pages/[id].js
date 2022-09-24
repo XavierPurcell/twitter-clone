@@ -100,21 +100,24 @@ function PostPage({ trendingResults, followResults, providers }) {
 export default PostPage;
 
 export async function getServerSideProps(context) {
-  const trendingResults = await fetch("https://jsonkeeper.com/b/NKEV").then(
-    (res) => res.json()
-  );
-  const followResults = await fetch("https://jsonkeeper.com/b/WWMJ").then(
-    (res) => res.json()
-  );
-  const providers = await getProviders();
-  const session = await getSession(context);
 
-  return {
-    props: {
-      trendingResults,
-      followResults,
-      providers,
-      session,
-    },
-  };
+  const trendingResults = await fetch("https://api.npoint.io/df3867eb85b5c0a63829").then(
+  (res) => res.json()
+);
+const followResults = await fetch("https://api.npoint.io/54b34afd99ae833fb42a").then(
+  (res) => res.json()
+);
+
+
+const providers = await getProviders();
+const session = await getSession(context);
+
+return {
+  props: {
+    trendingResults,
+    followResults,
+    providers,
+    session,
+  },
+};
 }
